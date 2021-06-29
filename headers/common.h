@@ -49,4 +49,11 @@ namespace SimpleML
 		}
 		return log_lkhd;
 	}
+
+	MatrixXf add_constant(const MatrixXf& X)
+	{
+		MatrixXf added(X.rows(), X.cols() + 1);
+		added << MatrixXf::Ones(X.rows(), 1), X;
+		return added;
+	}
 }

@@ -241,7 +241,11 @@ namespace SimpleML
 		return node;
 	}
 
-	void DecisionTree::print_tree() { print_implementation(root, 0); }
+	void DecisionTree::print_tree() 
+	{ 
+		cout << "Decision tree: " << endl;
+		print_implementation(root, 0); 
+	}
 
 	void print_implementation(Node* node, int width)
 	{
